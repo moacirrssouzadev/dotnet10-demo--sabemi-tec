@@ -38,24 +38,8 @@ public sealed class ReceivePaymentWebhookUseCase
         _logger = logger;
     }
 
-    public async Task<ReceiveWebhookResult> ExecuteAsync(string rawPayload, CancellationToken cancellationToken)
+    public async Task<ReceiveWebhookResult> ExecuteAsync(PaymentWebhookRequest request, string rawPayload, CancellationToken cancellationToken)
     {
-        PaymentWebhookRequest? request;
-
-        try
-        {
-            request = JsonSerializer.Deserialize<PaymentWebhookRequest>(rawPayload, SerializerOptions);
-        }
-        catch (JsonException exception)
-        {
-            return await PersistInvalidAsync(rawPayload, $"Invalid JSON payload: {exception.Message}", null, cancellationToken);
-        }
-
-        if (request is null)
-        {
-            return await PersistInvalidAsync(rawPayload, "Payload is required.", null, cancellationToken);
-        }
-
         var validation = await _validator.ValidateAsync(request, cancellationToken);
         if (!validation.IsValid)
         {

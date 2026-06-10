@@ -1,6 +1,43 @@
 @Sabemi.PaymentWebhook.Api_HostAddress = http://localhost:5095
 
-GET {{Sabemi.PaymentWebhook.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+### Exemplo usando API Key
+POST {{Sabemi.PaymentWebhook.Api_HostAddress}}/webhooks/pagamento
+Content-Type: application/json
+X-API-KEY: sabemi-dev-api-key
+
+{
+  "id_transacao": "TRX-20260610-0001",
+  "id_contrato": "CTR-123456",
+  "valor": 1500.75,
+  "data_pagamento": "2026-06-10T21:43:02.178Z",
+  "status": "PAGO"
+}
+
+### Exemplo usando Signature (HMAC-SHA256)
+### Para calcular a signature:
+### 1. Pega o payload JSON bruto (exatamente como é enviado na requisição)
+### 2. Calcula HMAC-SHA256 usando o secret "sabemi-dev-signature-secret-123456"
+### 3. Converte para hexadecimal em lowercase
+### 
+### Payload usado para cálculo (com formatação):
+### {
+###   "id_transacao": "TRX-20260610-0001",
+###   "id_contrato": "CTR-123456",
+###   "valor": 1500.75,
+###   "data_pagamento": "2026-06-10T21:43:02.178Z",
+###   "status": "PAGO"
+### }
+### Signature calculada: 0b1e0099db2325c261e9d9689545bd0c0d915e6ed569d28f97cdd8bdb8ee737e
+POST {{Sabemi.PaymentWebhook.Api_HostAddress}}/webhooks/pagamento
+Content-Type: application/json
+X-Signature: 0b1e0099db2325c261e9d9689545bd0c0d915e6ed569d28f97cdd8bdb8ee737e
+
+{
+  "id_transacao": "TRX-20260610-0001",
+  "id_contrato": "CTR-123456",
+  "valor": 1500.75,
+  "data_pagamento": "2026-06-10T21:43:02.178Z",
+  "status": "PAGO"
+}
 
 ###

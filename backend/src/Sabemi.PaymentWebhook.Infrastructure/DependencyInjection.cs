@@ -20,7 +20,7 @@ public static class DependencyInjection
 
         services.AddSingleton<IClock, SystemClock>();
         services.AddSingleton<IPaymentProcessingQueue, PaymentProcessingQueue>();
-        services.AddHostedService<PaymentWebhookBackgroundService>();
+        // services.AddHostedService<PaymentWebhookBackgroundService>();
 
         services.AddScoped<IWebhookEventRepository, WebhookEventRepository>();
         services.AddScoped<IContractStatusRepository, ContractStatusRepository>();

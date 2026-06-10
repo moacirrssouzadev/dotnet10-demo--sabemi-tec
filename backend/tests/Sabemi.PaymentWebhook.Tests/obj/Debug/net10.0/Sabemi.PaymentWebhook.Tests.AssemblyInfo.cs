@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sabemi.PaymentWebhook.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02babac8816482fe5fed72dabf60fdad2a1b7731")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sabemi.PaymentWebhook.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sabemi.PaymentWebhook.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

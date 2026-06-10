@@ -20,12 +20,13 @@ public sealed class WebhooksController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<IActionResult> ReceivePaymentWebhook(CancellationToken cancellationToken)
+    public async Task<IActionResult> ReceivePaymentWebhook([FromBody] PaymentWebhookRequest request, CancellationToken cancellationToken)
     {
+        Request.Body.Position = 0;
         using var reader = new StreamReader(Request.Body);
         var rawPayload = await reader.ReadToEndAsync(cancellationToken);
 
-        var result = await _receivePaymentWebhook.ExecuteAsync(rawPayload, cancellationToken);
+        var result = await _receivePaymentWebhook.ExecuteAsync(request, rawPayload, cancellationToken);
 
         return result.Outcome switch
         {

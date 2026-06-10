@@ -214,3 +214,14 @@ C:\Projetos\Sabemi\backend\tests\Sabemi.PaymentWebhook.Tests\bin\Debug\net10.0\r
 C:\Projetos\Sabemi\backend\tests\Sabemi.PaymentWebhook.Tests\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Projetos\Sabemi\backend\tests\Sabemi.PaymentWebhook.Tests\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Projetos\Sabemi\backend\tests\Sabemi.PaymentWebhook.Tests\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_Sabemi.PaymentWebhook.Tests
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_Sabemi.PaymentWebhook.Tests
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\obj\Debug\net10.0\Sabemi.PaymentWebhook.Tests.csproj.AssemblyReference.cache
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\obj\Debug\net10.0\Sabemi.PaymentWebhook.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\obj\Debug\net10.0\Sabemi.PaymentWebhook.Tests.AssemblyInfoInputs.cache
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\obj\Debug\net10.0\Sabemi.PaymentWebhook.Tests.AssemblyInfo.cs
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\obj\Debug\net10.0\Sabemi.PaymentWebhook.Tests.csproj.CoreCompileInputs.cache
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\obj\Debug\net10.0\Sabemi.PaymentWebhook.Tests.sourcelink.json
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\obj\Debug\net10.0\Sabemi.PaymentWebhook.Tests.dll
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\obj\Debug\net10.0\refint\Sabemi.PaymentWebhook.Tests.dll
+C:\Projetos\dotnet10-demo--sabemi-tec\backend\tests\Sabemi.PaymentWebhook.Tests\obj\Debug\net10.0\Sabemi.PaymentWebhook.Tests.pdb

@@ -1,6 +1,6 @@
 import { RefreshCw, Search, XCircle } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { listWebhookEvents, seedPaymentWebhookEvents } from '../api/webhookEventsApi';
+import { listWebhookEvents } from '../api/webhookEventsApi';
 import { StatusBadge } from '../components/StatusBadge';
 import type { PaymentStatus, WebhookEvent } from '../types/webhookEvent';
 
@@ -19,7 +19,6 @@ export function Dashboard() {
   const [status, setStatus] = useState<PaymentStatus | ''>('');
   const [contractId, setContractId] = useState('');
   const [loading, setLoading] = useState(false);
-  const [seeding, setSeeding] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdatedAt, setLastUpdatedAt] = useState<Date | null>(null);
 
@@ -41,25 +40,6 @@ export function Dashboard() {
       setLoading(false);
     }
   }, [contractId, status]);
-
-  const handleSeedEvents = useCallback(async () => {
-    setSeeding(true);
-    setError(null);
-
-    try {
-      const result = await seedPaymentWebhookEvents(10);
-
-      if (result.failed > 0) {
-        throw new Error(`Foram criados ${result.success} registros, ${result.failed} falharam: ${result.errors.join('; ')}`);
-      }
-
-      await loadEvents();
-    } catch (seedError) {
-      setError(seedError instanceof Error ? seedError.message : 'Falha ao inserir registros');
-    } finally {
-      setSeeding(false);
-    }
-  }, [loadEvents]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -97,9 +77,6 @@ export function Dashboard() {
         <button className="icon-button" type="button" onClick={() => loadEvents()} title="Atualizar pagamentos">
           <RefreshCw size={18} aria-hidden="true" className={loading ? 'spin' : ''} />
           <span>Atualizar</span>
-        </button>
-        <button className="icon-button" type="button" onClick={handleSeedEvents} disabled={loading || seeding} title="Inserir 10 registros">
-          <span>{seeding ? 'Enviando 10 registros...' : 'Inserir 10 registros'}</span>
         </button>
       </section>
 

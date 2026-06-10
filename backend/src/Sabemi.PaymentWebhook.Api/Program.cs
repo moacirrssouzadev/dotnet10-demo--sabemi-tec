@@ -34,6 +34,11 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 app.UseSerilogRequestLogging();
+app.Use((context, next) =>
+{
+    context.Request.EnableBuffering();
+    return next(context);
+});
 
 if (app.Environment.IsDevelopment())
 {
@@ -45,11 +50,12 @@ app.UseCors("Frontend");
 app.UseMiddleware<ApiKeyMiddleware>();
 app.MapControllers();
 
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<PaymentWebhookDbContext>();
-    dbContext.Database.Migrate();
-}
+// Temporariamente comentado para testar autenticação sem DB
+// using (var scope = app.Services.CreateScope())
+// {
+//     var dbContext = scope.ServiceProvider.GetRequiredService<PaymentWebhookDbContext>();
+//     dbContext.Database.Migrate();
+// }
 
 app.Run();
 

@@ -47,35 +47,4 @@ export async function sendPaymentWebhook(payload: PaymentWebhookPayload): Promis
   });
 }
 
-export async function seedPaymentWebhookEvents(count = 10) {
-  const now = new Date();
 
-  const results = await Promise.allSettled(
-    Array.from({ length: count }, (_, index) => {
-      const payload: PaymentWebhookPayload = {
-        id_transacao: `TX-${Date.now()}-${index + 1}`,
-        id_contrato: `CTR00${(index % 5) + 1}`,
-        valor: Number((Math.random() * 900 + 100).toFixed(2)),
-        data_pagamento: new Date(now.getTime() - index * 10 * 60 * 1000).toISOString(),
-        status: index % 4 === 0 ? 'ERRO' : 'SUCESSO'
-      };
-
-      return sendPaymentWebhook(payload);
-    })
-  );
-
-  const failed = results.filter(result => result.status === 'rejected' || (result.status === 'fulfilled' && !result.value.ok));
-  const errors = failed.map((result, index) => {
-    if (result.status === 'rejected') {
-      return `request ${index + 1} error: ${result.reason}`;
-    }
-
-    return `request ${index + 1} failed (${result.value.status})`;
-  });
-
-  return {
-    success: count - failed.length,
-    failed: failed.length,
-    errors
-  };
-}
