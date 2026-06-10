@@ -1,0 +1,11 @@
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\bin\Debug\net10.0\Sabemi.PaymentWebhook.Domain.deps.json
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\bin\Debug\net10.0\Sabemi.PaymentWebhook.Domain.dll
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\bin\Debug\net10.0\Sabemi.PaymentWebhook.Domain.pdb
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\obj\Debug\net10.0\Sabemi.PaymentWebhook.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\obj\Debug\net10.0\Sabemi.PaymentWebhook.Domain.AssemblyInfoInputs.cache
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\obj\Debug\net10.0\Sabemi.PaymentWebhook.Domain.AssemblyInfo.cs
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\obj\Debug\net10.0\Sabemi.PaymentWebhook.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\obj\Debug\net10.0\Sabemi.PaymentWebhook.Domain.dll
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\obj\Debug\net10.0\refint\Sabemi.PaymentWebhook.Domain.dll
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\obj\Debug\net10.0\Sabemi.PaymentWebhook.Domain.pdb
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Domain\obj\Debug\net10.0\ref\Sabemi.PaymentWebhook.Domain.dll

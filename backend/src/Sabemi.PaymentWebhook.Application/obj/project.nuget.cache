@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "M1GNziQ7Quc=",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\dotnet10-demo--sabemi-tec\\backend\\src\\Sabemi.PaymentWebhook.Application\\Sabemi.PaymentWebhook.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Moacir\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\Moacir\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.9\\microsoft.extensions.dependencyinjection.abstractions.10.0.9.nupkg.sha512",
+    "C:\\Users\\Moacir\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.9\\microsoft.extensions.logging.abstractions.10.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

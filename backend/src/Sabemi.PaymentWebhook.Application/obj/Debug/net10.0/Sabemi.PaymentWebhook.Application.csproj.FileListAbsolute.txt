@@ -1,0 +1,15 @@
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\bin\Debug\net10.0\Sabemi.PaymentWebhook.Application.deps.json
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\bin\Debug\net10.0\Sabemi.PaymentWebhook.Application.dll
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\bin\Debug\net10.0\Sabemi.PaymentWebhook.Application.pdb
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\bin\Debug\net10.0\Sabemi.PaymentWebhook.Domain.dll
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\bin\Debug\net10.0\Sabemi.PaymentWebhook.Domain.pdb
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\Sabemi.PaymentWebhook.Application.csproj.AssemblyReference.cache
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\Sabemi.PaymentWebhook.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\Sabemi.PaymentWebhook.Application.AssemblyInfoInputs.cache
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\Sabemi.PaymentWebhook.Application.AssemblyInfo.cs
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\Sabemi.PaymentWebhook.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\Sabemi.P.3F964D06.Up2Date
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\Sabemi.PaymentWebhook.Application.dll
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\refint\Sabemi.PaymentWebhook.Application.dll
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\Sabemi.PaymentWebhook.Application.pdb
+C:\Projetos\Sabemi\backend\src\Sabemi.PaymentWebhook.Application\obj\Debug\net10.0\ref\Sabemi.PaymentWebhook.Application.dll

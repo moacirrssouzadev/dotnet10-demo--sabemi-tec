@@ -1,0 +1,57 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: sabemi-postgres
+    environment:
+      POSTGRES_DB: sabemi_payments
+      POSTGRES_USER: sabemi
+      POSTGRES_PASSWORD: sabemi
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sabemi -d sabemi_payments"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - sabemi-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/src/Sabemi.PaymentWebhook.Api/Dockerfile
+    container_name: sabemi-backend
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ApiKey: sabemi-dev-api-key
+      ConnectionStrings__Postgres: Host=postgres;Port=5432;Database=sabemi_payments;Username=sabemi;Password=sabemi
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - sabemi-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: sabemi-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - sabemi-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  sabemi-network:
+    driver: bridge
